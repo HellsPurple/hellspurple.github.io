@@ -1,0 +1,97 @@
+:root {
+    --dark-purple: #230836;
+    --deep-black: #0A0A0A; 
+    --darker-purple: #1c0121;
+    --soft-lavender: #bcbcee;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Bebas Neue';
+    background-color: var(--deep-black);
+    color: var(--soft-lavender);
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 20px;
+}
+
+header {
+    background-color: var(--dark-purple);
+    color: var(--soft-lavender);
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    border-bottom: 3px solid var(--deeper-purple);
+}
+
+nav {
+    background-color: var(--darker-purple);
+    padding: 1rem;
+    text-align: center;
+}
+
+nav a {
+    color: var(--soft-lavender);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #9370DB;  /* Medium purple for hover effect */
+    transform: scale(1.1);
+}
+
+.blog-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.blog-post {
+    background-color: var(--dark-purple);
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    border: 1px solid var(--deeper-purple);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.blog-post:hover {
+    transform: scale(1.05);
+    background-color: var(--darker-purple);
+}
+
+.blog-post h2 {
+    margin-bottom: 10px;
+    color: var(--soft-lavender);
+    border-bottom: 2px solid var(--darker-purple);
+    padding-bottom: 10px;
+}
+
+.blog-post p {
+    color: rgba(230,230,250,0.8);
+}
+
+footer {
+    background-color: var(--dark-purple);
+    color: var(--soft-lavender);
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 3px solid var(--deeper-purple);
+}
