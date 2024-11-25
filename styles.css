@@ -4,6 +4,7 @@
     --darker-purple: #1c0121;
     --soft-lavender: #bcbcee;
 }
+/* #10002b, #240046, #3c096c, #5a189a, #7b2cbf, #9d4edd, #c77dff, #e0aaff */
 
 * {
     margin: 0;
@@ -20,9 +21,9 @@ body {
 
 .container {
     width: 80%;
-    margin: 0 auto;
-    overflow: hidden;
-    padding: 20px;
+    margin:0 auto;
+    overflow: none; /* Good idea ?*/
+    padding: 2vh;
 }
 
 header {
@@ -34,6 +35,13 @@ header {
     border-bottom: 3px solid var(--deeper-purple);
 }
 
+header h1 {
+    font-size:10vh;
+}
+
+header p {
+    font-size:2.3vh;
+}
 nav {
     background-color: var(--darker-purple);
     padding: 1rem;
@@ -41,57 +49,109 @@ nav {
 }
 
 nav a {
+    display: box;
     color: var(--soft-lavender);
     text-decoration: none;
     margin: 0 15px;
+    padding: 0 15px;
+    border-right :2px solid var(--soft-lavender);
+    border-left: 2px solid var(--soft-lavender);
     font-weight: bold;
+    font-size: 3vh;
     transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #9370DB;  /* Medium purple for hover effect */
-    transform: scale(1.1);
+    color: #fffb00;  /* Medium purple for hover effect */
 }
 
 .blog-posts {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-    margin-top: 20px;
+    margin-top: 2vh;
 }
 
 .blog-post {
     background-color: var(--dark-purple);
     border-radius: 8px;
     padding: 20px;
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease, background-color 0.2s ease, border 0.2s ease;
     border: 1px solid var(--deeper-purple);
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
 .blog-post:hover {
-    transform: scale(1.05);
+    transform: scale(1.03) ;
+    border: 1px solid var(--soft-lavender);
     background-color: var(--darker-purple);
 }
 
 .blog-post h2 {
     margin-bottom: 10px;
     color: var(--soft-lavender);
-    border-bottom: 2px solid var(--darker-purple);
+    border-bottom: 2px solid var(--soft-lavender);
     padding-bottom: 10px;
+    cursor: pointer;
 }
 
 .blog-post p {
     color: rgba(230,230,250,0.8);
 }
 
-footer {
-    background-color: var(--dark-purple);
-    color: var(--soft-lavender);
+
+/* Pages style */
+
+.title-container {
     text-align: center;
-    padding: 1rem;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    border-top: 3px solid var(--deeper-purple);
+}
+
+h3.titles {
+    display:inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align:center;
+    font-size:5vh;
+    border: 3px solid var(--soft-lavender);
+    margin:3vh auto;
+    padding: 1vh 1vw;
+}
+
+/* Pages in general */
+ul{
+    padding-left:20vw;
+    padding-bottom: 5vh;
+}
+
+li {
+    font-size: 2.5vh;
+    color:#d2d191;
+    font-family: 'Courier New', Courier, monospace;
+    padding-bottom:2vh;
+}
+
+h4 {
+    padding-left:20vw;
+    font-size:4vh;
+    text-decoration: overline underline;
+}
+
+a {
+    color:#aca90b;
+    text-decoration: none;
+    font-size: 3vh;
+}
+
+a:hover {
+    color:#dad613;
+}
+
+
+
+/* Special 'About me' */
+
+#PP {
+    height: 20vh;
+    margin: auto;
+    padding: auto;
 }
